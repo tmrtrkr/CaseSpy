@@ -1,0 +1,52 @@
+import tkinter as tk
+from PIL import Image, ImageTk
+import mss
+from screeninfo import get_monitors
+
+class LiveScreenCapture(tk.Frame):
+    def __init__(self):
+        super().__init__()
+
+        monitor = get_monitors()[0]
+        self.capture_area = {
+            'top': monitor.y,
+            'left': monitor.x,
+            'width': monitor.width,
+            'height': monitor.height
+        }
+
+        self.image_label = tk.Label(self)
+        self.image_label.pack()
+
+    
+        self.update_capture()
+
+
+
+    def capture_screen(self):
+        with mss.mss() as sct:
+            sct_img = sct.grab(self.capture_area)
+            img = Image.frombytes('RGB', sct_img.size, sct_img.rgb)
+
+            target_width = 400
+            target_height = 250
+            resize_ratio_width = target_width / sct_img.width
+            resize_ratio_height = target_height / sct_img.height
+            resize_ratio = min(resize_ratio_width, resize_ratio_height)
+           
+            new_size = (int(sct_img.width * resize_ratio), int(sct_img.height * resize_ratio))
+
+            img = img.resize(new_size)
+            return img
+
+
+    def update_capture(self):
+        img = self.capture_screen()
+        img_tk = ImageTk.PhotoImage(image=img)
+        self.image_label.imgtk = img_tk
+        self.image_label.configure(image=img_tk)
+
+    
+        self.after(50, self.update_capture)
+
+

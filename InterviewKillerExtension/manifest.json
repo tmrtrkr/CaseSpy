@@ -1,0 +1,33 @@
+{
+  "manifest_version": 3,
+  "name": "Interview Killer Trigger",
+  "version": "1.0",
+  "description": "Triggers an action in the Interview Killer app",
+  "permissions": ["activeTab"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "commands": {
+    "triggerSendToApi": {
+      "suggested_key": {
+        "default": "Alt+K",
+        "mac": "Alt+K"
+      },
+      "description": "Trigger sendToApi Function"
+    },
+    "takeShot1": {
+      "suggested_key": {
+        "default": "Alt+S",
+        "mac": "Alt+S"
+      },
+      "description": "Trigger takeShot1 Function"
+    },
+    "takeShot2": {
+      "suggested_key": {
+        "default": "Alt+X",
+        "mac": "Alt+X"
+      },
+      "description": "Trigger takeShot2 Function"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+     pip install them all
+
+     
+customtkinter      5.2.2
+Flask              3.0.2
+Flask-Cors         4.0.0
+mss                9.0.1
+openai             1.14.3
+opencv-python      4.9.0.80
+pillow             10.3.0
+pytesseract        0.3.10
+pytweening         1.2.0
+screeninfo         0.8.1

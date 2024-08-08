@@ -1,6 +1,6 @@
-     pip install them all
+tesseract OCR windows https://github.com/UB-Mannheim/tesseract/wiki
 
-     
+pip install 
 customtkinter      5.2.2
 Flask              3.0.2
 Flask-Cors         4.0.0

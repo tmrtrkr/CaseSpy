@@ -1,4 +1,5 @@
 tesseract OCR windows https://github.com/UB-Mannheim/tesseract/wiki
+google chrome
 
 pip install 
 customtkinter      5.2.2

@@ -1,3 +1,5 @@
+This program is written for educational purposes to demonstrate the thread of computer-vision applications to online exams and meetings.
+
 This program helps user to takescreenshots, turn it to imgtotxt and send it to chatgpt in order to solve a problem or case without geting caught by proctor programs
 
 In order to start the program run the main.py and go to your localhost on webpage (Sometimes it bugs so refresh or stop the python.exe in Task manager)

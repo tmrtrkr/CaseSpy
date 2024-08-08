@@ -8,8 +8,8 @@ class Totxt:
     def __init__(self):
         tess.pytesseract.tesseract_cmd ="C:/Program Files/Tesseract-OCR/tesseract.exe"
 
-        self.caseImgPath = r'C:\Users\Tamer\Desktop\projeler\AI\Interview_Killer\Screen_Shots\shot1.png'
-        self.codeImgPath = r'C:\Users\Tamer\Desktop\projeler\AI\Interview_Killer\Screen_Shots\shot2.png'
+        self.caseImgPath = r'YOURPATH\Screen_Shots\shot1.png'
+        self.codeImgPath = r'YOURPATH\Screen_Shots\shot2.png'
 
         self.shot1Exist = os.path.exists(self.caseImgPath)
         self.shot2Exist = os.path.exists(self.codeImgPath)
